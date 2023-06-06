@@ -4,7 +4,12 @@ namespace Commander.Data;
 
 public class MockCommanderRepo : ICommanderRepo
 {
-    public IEnumerable<Command> GetAppCommands()
+    public bool SaveChanges()
+    {
+        throw new NotImplementedException();
+    }
+
+    public IEnumerable<Command> GetAllCommands()
     {
         var commands = new List<Command>()
         {
@@ -33,5 +38,20 @@ public class MockCommanderRepo : ICommanderRepo
             Line = "Test Line",
             Platform = "Test Platform"
         };
+    }
+
+    public void CreateCommand(Command cmd)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void UpdateCommand(Command cmd)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void DeleteCommand(Command cmd)
+    {
+        throw new NotImplementedException();
     }
 }
